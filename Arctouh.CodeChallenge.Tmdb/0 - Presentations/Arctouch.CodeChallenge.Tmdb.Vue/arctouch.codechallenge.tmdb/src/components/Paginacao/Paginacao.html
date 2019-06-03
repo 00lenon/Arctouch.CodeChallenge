@@ -1,5 +1,9 @@
 <div id="paginacao">
-    <ul>
-            <Filme :filme=filme></Filme>
+    <ul v-if="quantidadeDePaginas">
+        <li v-if="paginaAtual != 1" v-on:click="pageClick(1)">First</li>
+        <li v-if="paginaAtual != 1" v-on:click="pageClick((paginaAtual-1))">Previous</li>
+        <li class="active">{{paginaAtual}}</li>
+        <li v-if="quantidadeDePaginas != paginaAtual" v-on:click="pageClick((paginaAtual+1))">Next</li>
+        <li v-if="quantidadeDePaginas != paginaAtual" v-on:click="pageClick(quantidadeDePaginas)">Last</li>
     </ul>
 </div>

@@ -4,10 +4,17 @@
 <script>
  export default{
      props: {
-            paginaAtual: 1,
-            quantidadeDePaginas: 1
+        paginaAtual: Number,
+        quantidadeDePaginas: Number
     },
     data(){
+        return {
+        }
+    },
+    methods:{
+        pageClick(pagina){
+            this.$emit('pageClick', pagina);
+        }
     }
 }
 </script>

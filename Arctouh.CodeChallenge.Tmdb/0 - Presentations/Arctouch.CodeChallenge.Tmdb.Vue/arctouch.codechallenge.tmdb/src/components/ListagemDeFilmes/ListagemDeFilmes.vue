@@ -7,11 +7,13 @@ import Filme from "../Filmes/Filme.vue"
      data(){
         return {
             filmes: {},
-            searchQuery:""
+            searchQuery:"",
+            paginaAtual:1
         }
     },
     methods:{
-        getFilmes(pagina){
+        getFilmes(){
+            console.log(this.paginaAtual);
             this.axios
                 .get('https://gjrm2i1sw3.execute-api.us-east-1.amazonaws.com/Prod/Arctouh_CodeChallenge_Tmdb_UpcomingMovies')
                 .then(response => {
@@ -19,12 +21,13 @@ import Filme from "../Filmes/Filme.vue"
                 })
                 .catch(error => console.log(error));
         },
-        search(){
+        search(pagina){
             this.filmes = null;
+            this.paginaAtual = pagina;
             if(this.searchQuery){
                 this.searchMovies(this.searchQuery)
             }else{
-                this.getFilmes(1);
+                this.getFilmes();
             }
         },
         searchMovies(query){

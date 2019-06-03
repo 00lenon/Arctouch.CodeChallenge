@@ -9,10 +9,12 @@
         <h2 class="loading">Carregando...</h2>
     </template>
     <template v-else>
+        <Paginacao @pageClick="search" v-if="filmes.total_pages > 1" :paginaAtual=filmes.page :quantidadeDePaginas=filmes.total_pages></Paginacao>
         <div>
             <template v-for="filme in filmes.results">
                 <Filme :filme=filme></Filme>
             </template>
         </div>
+        <Paginacao v-if="filmes.total_pages > 1" :paginaAtual=filmes.page :quantidadeDePaginas=filmes.total_pages></Paginacao>
     </template>
 </div>

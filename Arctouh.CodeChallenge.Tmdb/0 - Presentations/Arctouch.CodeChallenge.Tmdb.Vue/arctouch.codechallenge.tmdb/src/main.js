@@ -5,7 +5,6 @@ import App from './App.vue'
 
 import DetalhesDoFilme from './components/DetalhesDoFilme/DetalhesDoFilme.vue'
 import ListagemDeFilmes from './components/ListagemDeFilmes/ListagemDeFilmes.vue'
-import Filme from './components/Filmes/Filme.vue'
 
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
@@ -21,15 +20,8 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faSpinner, faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-
-library.add(faSpinner, faThumbsUp, faThumbsDown)
-
-
-library.add(faUserSecret)
-
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-
 Vue.component("Filme", require('./components/Filmes/Filme.vue').default);
+Vue.component("Paginacao", require('./components/Paginacao/Paginacao.vue').default);
 
 const routes = [
     { path: '/', component: ListagemDeFilmes },
