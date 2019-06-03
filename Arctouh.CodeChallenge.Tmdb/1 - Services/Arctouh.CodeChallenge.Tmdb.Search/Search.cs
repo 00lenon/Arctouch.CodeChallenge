@@ -1,7 +1,9 @@
 using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
+using Arctouch.CodeChallenge.Tmdb.Ioc;
 using Arctouh.CodeChallenge.Tmdb.Application.Json;
 using Arctouh.CodeChallenge.Tmdb.Application.TMDB;
+using Arctouh.CodeChallenge.Tmdb.Search.Models;
 using System.Threading.Tasks;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
@@ -11,12 +13,14 @@ namespace Arctouh.CodeChallenge.Tmdb.Search
 {
     public class Search
     {
-        public async Task<APIGatewayProxyResponse> SearchMovies(ILambdaContext context)
+        public async Task<APIGatewayProxyResponse> SearchMovies(InputModel input, ILambdaContext context)
         {
-            var tmdbServices = new TmdbServices();
-            var jsonServices = new JsonServices();
+            var serviceProvider = Ioc.GetServiceProvider();
 
-            var searchResult = await tmdbServices.SearchUpcomingMovies("pokemon", 1);
+            var tmdbServices = (ITmdbServices)serviceProvider.GetService(typeof(ITmdbServices));
+            var jsonServices = (IJsonServices)serviceProvider.GetService(typeof(IJsonServices));
+
+            var searchResult = await tmdbServices.SearchUpcomingMovies(input.QueryString, input.Pagina);
 
             return new APIGatewayProxyResponse
             {

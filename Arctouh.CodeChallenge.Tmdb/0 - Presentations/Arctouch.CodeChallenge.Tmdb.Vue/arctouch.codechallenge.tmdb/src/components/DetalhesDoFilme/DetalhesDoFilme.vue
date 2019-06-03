@@ -12,7 +12,7 @@
     methods:{
         getFilme(id){
             this.axios
-                .get('https://gjrm2i1sw3.execute-api.us-east-1.amazonaws.com/Prod/Arctouh_CodeChallenge_Tmdb_MovieDetails')
+                .get('https://gjrm2i1sw3.execute-api.us-east-1.amazonaws.com/Prod/Arctouh_CodeChallenge_Tmdb_MovieDetails?movieId=' + id)
                 .then(response => {
                     this.filme = JSON.parse(response.data.body);
                 })

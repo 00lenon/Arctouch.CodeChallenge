@@ -1,10 +1,10 @@
 <div id="cartaz-filme">
     <a :href="urlDeDetalhes + filme.id">
-        <img :src="urlDeImagens + filme.poster_path" :alt="filme.title">
+        <img v-if="filme.poster_path" :src="urlDeImagens + filme.poster_path" :alt="filme.title">
     </a>
     <a :href="urlDeDetalhes + filme.id" class="nome">{{filme.title}}</a>
-    <p class="data">{{filme.release_date | moment("DD/MM/YYYY") }}</p>
+    <p v-if="filme.release_date" class="data">{{filme.release_date | moment("DD/MM/YYYY") }}</p>
     <div class="generos">
-        <p class="genero"><span class="genero-do-filme" v-for="genero in filme.genre_ids">{{genero}}</span></p>
+        <p class="genero"><span class="genero-do-filme" v-for="genero in filme.Generos">{{genero.name}}</span></p>
     </div>
 </div>

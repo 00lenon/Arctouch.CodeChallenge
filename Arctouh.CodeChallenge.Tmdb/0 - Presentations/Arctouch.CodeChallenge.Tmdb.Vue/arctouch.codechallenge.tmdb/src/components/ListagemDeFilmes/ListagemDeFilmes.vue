@@ -15,15 +15,18 @@ import Filme from "../Filmes/Filme.vue"
         getFilmes(){
             console.log(this.paginaAtual);
             this.axios
-                .get('https://gjrm2i1sw3.execute-api.us-east-1.amazonaws.com/Prod/Arctouh_CodeChallenge_Tmdb_UpcomingMovies')
+                .get('https://gjrm2i1sw3.execute-api.us-east-1.amazonaws.com/Prod/Arctouh_CodeChallenge_Tmdb_UpcomingMovies?pagina='+this.paginaAtual)
                 .then(response => {
                     this.filmes = JSON.parse(response.data.body);
                 })
                 .catch(error => console.log(error));
         },
-        search(pagina){
-            this.filmes = null;
+        pageChange(pagina){
             this.paginaAtual = pagina;
+            this.search();
+        },
+        search(){
+            this.filmes = null;
             if(this.searchQuery){
                 this.searchMovies(this.searchQuery)
             }else{
@@ -32,7 +35,7 @@ import Filme from "../Filmes/Filme.vue"
         },
         searchMovies(query){
             this.axios
-                .get("https://gjrm2i1sw3.execute-api.us-east-1.amazonaws.com/Prod/Arctouh_CodeChallenge_Tmdb_Search")
+                .get("https://gjrm2i1sw3.execute-api.us-east-1.amazonaws.com/Prod/Arctouh_CodeChallenge_Tmdb_Search?queryString="+query+"&pagina="+this.paginaAtual)
                 .then(response => {
                     this.filmes = JSON.parse(response.data.body);
                 })

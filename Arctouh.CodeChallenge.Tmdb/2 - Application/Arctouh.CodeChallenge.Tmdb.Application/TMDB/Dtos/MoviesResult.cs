@@ -9,10 +9,10 @@ namespace Arctouh.CodeChallenge.Tmdb.Application.TMDB.Dtos
         [JsonProperty("page")]
         public int Pagina { get; set; }
 
+        [JsonProperty("results")]
+        public ICollection<MovieDto> Results { get; set; }
+
         [JsonProperty("total_pages")]
         public int TotalDePaginas { get; set; }
-
-        [JsonProperty("results")]
-        public ICollection<MovieDto> UpcomingMovies { get; set; }
     }
 }
