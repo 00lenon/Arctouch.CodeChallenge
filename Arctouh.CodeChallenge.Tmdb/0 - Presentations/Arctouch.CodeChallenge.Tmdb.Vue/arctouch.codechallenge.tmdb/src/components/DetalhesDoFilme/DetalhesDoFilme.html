@@ -1,0 +1,20 @@
+<div>
+    <h1>Movie details</h1>
+    <template v-if="!filme">
+        <h2 class="loading">Carregando...</h2>
+    </template>
+    <template v-else>
+        <div id="movie">
+            <img :src="urlDeImagens + filme.poster_path" :alt="filme.title">
+            <div id="detalhes-filme">
+                <h2 class="nome">{{filme.title}}</h2>
+                <h4 class="data">{{filme.release_date | moment("DD/MM/YYYY") }}</h4>
+                <h4 class="genero">
+                    <span class="genero-do-filme" v-for="genero in filme.genres">{{genero.name}}</span>
+                </h4>
+                <p class="overview-title">Overview</p>
+                <p class="overview">{{filme.overview}}</p>
+            </div>
+        </div>
+    </template>
+</div>

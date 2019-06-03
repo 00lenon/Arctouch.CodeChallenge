@@ -338,3 +338,14 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+src/_drafts
+package-lock.json
+/Arctouh.CodeChallenge.Tmdb/0 - Presentations/Arctouch.CodeChallenge.Tmdb.Vue.zip

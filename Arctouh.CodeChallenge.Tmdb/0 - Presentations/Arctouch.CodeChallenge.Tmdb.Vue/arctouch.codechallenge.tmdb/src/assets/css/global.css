@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body{
+    background-color: #171717;
+}
+
+#container {
+    font-family: sans-serif;
+}
+
+.loading{
+    color: #fff;
+    text-align: center;
+}

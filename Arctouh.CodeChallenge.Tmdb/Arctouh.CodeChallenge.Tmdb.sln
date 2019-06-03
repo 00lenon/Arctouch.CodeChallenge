@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentations", "0 - Presentations", "{AE390B7F-3D0D-482E-9ED4-9A24BE88CBFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{F8794790-34E1-4DD8-9978-C0F7E2F5C02A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{6961A19F-2088-427D-AF20-F598903E538D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{9D3004BF-704B-4D88-9DD9-E59B489CF99B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arctouch.CodeChallenge.Tmdb.Tester", "1 - Services\Arctouch.CodeChallenge.Tmdb.Tester\Arctouch.CodeChallenge.Tmdb.Tester.csproj", "{0D951939-EA54-43B6-B81A-47C4FAFA57ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arctouh.CodeChallenge.Tmdb.UpcomingMovies", "1 - Services\Arctouh.CodeChallenge.Tmdb.UpcomingMovies\Arctouh.CodeChallenge.Tmdb.UpcomingMovies.csproj", "{359055BF-EE56-48EC-AF5D-31165895D243}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arctouh.CodeChallenge.Tmdb.MovieDetails", "1 - Services\Arctouh.CodeChallenge.Tmdb.MovieDetails\Arctouh.CodeChallenge.Tmdb.MovieDetails.csproj", "{6E01A38B-4B7D-4853-9ECC-8006291A8E80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arctouh.CodeChallenge.Tmdb.Search", "1 - Services\Arctouh.CodeChallenge.Tmdb.Search\Arctouh.CodeChallenge.Tmdb.Search.csproj", "{841ED077-F468-4A83-B266-78D1CC252C99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{F9997D0F-4254-445F-8C42-9269284FC479}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - CrossCutting", "4.1 - CrossCutting", "{24647D8D-7234-4C66-BBC8-A4776177D350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arctouh.CodeChallenge.Tmdb.Application", "2 - Application\Arctouh.CodeChallenge.Tmdb.Application\Arctouh.CodeChallenge.Tmdb.Application.csproj", "{05F5C8DF-66D7-491B-ABE0-E50CE00819D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D951939-EA54-43B6-B81A-47C4FAFA57ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D951939-EA54-43B6-B81A-47C4FAFA57ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D951939-EA54-43B6-B81A-47C4FAFA57ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D951939-EA54-43B6-B81A-47C4FAFA57ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{359055BF-EE56-48EC-AF5D-31165895D243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{359055BF-EE56-48EC-AF5D-31165895D243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{359055BF-EE56-48EC-AF5D-31165895D243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{359055BF-EE56-48EC-AF5D-31165895D243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E01A38B-4B7D-4853-9ECC-8006291A8E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E01A38B-4B7D-4853-9ECC-8006291A8E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E01A38B-4B7D-4853-9ECC-8006291A8E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E01A38B-4B7D-4853-9ECC-8006291A8E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{841ED077-F468-4A83-B266-78D1CC252C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{841ED077-F468-4A83-B266-78D1CC252C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{841ED077-F468-4A83-B266-78D1CC252C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{841ED077-F468-4A83-B266-78D1CC252C99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F5C8DF-66D7-491B-ABE0-E50CE00819D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F5C8DF-66D7-491B-ABE0-E50CE00819D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F5C8DF-66D7-491B-ABE0-E50CE00819D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F5C8DF-66D7-491B-ABE0-E50CE00819D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D951939-EA54-43B6-B81A-47C4FAFA57ED} = {F8794790-34E1-4DD8-9978-C0F7E2F5C02A}
+		{359055BF-EE56-48EC-AF5D-31165895D243} = {F8794790-34E1-4DD8-9978-C0F7E2F5C02A}
+		{6E01A38B-4B7D-4853-9ECC-8006291A8E80} = {F8794790-34E1-4DD8-9978-C0F7E2F5C02A}
+		{841ED077-F468-4A83-B266-78D1CC252C99} = {F8794790-34E1-4DD8-9978-C0F7E2F5C02A}
+		{24647D8D-7234-4C66-BBC8-A4776177D350} = {F9997D0F-4254-445F-8C42-9269284FC479}
+		{05F5C8DF-66D7-491B-ABE0-E50CE00819D7} = {6961A19F-2088-427D-AF20-F598903E538D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1E4B508-EDAB-4504-ADD5-C025E5BD695F}
+	EndGlobalSection
+EndGlobal

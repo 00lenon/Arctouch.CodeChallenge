@@ -1,0 +1,18 @@
+<div id="listagem">
+    <div class="header">
+        <h1>Upcoming movies</h1>
+        <div class="search">
+            <input placeholder="Search for a movie" @keyup.enter="search" v-model="searchQuery" />
+        </div>
+    </div>
+    <template v-if="!filmes">
+        <h2 class="loading">Carregando...</h2>
+    </template>
+    <template v-else>
+        <div>
+            <template v-for="filme in filmes.results">
+                <Filme :filme=filme></Filme>
+            </template>
+        </div>
+    </template>
+</div>
