@@ -1,0 +1,62 @@
+#cartaz-filme{
+    padding: 10px;
+    display: inline-block;
+    width: 170px;
+    margin: 5px;
+    color: #fff;
+    text-align: left;
+    
+    p{
+        margin: 5px 0 0;
+        color: #919191;
+    }
+
+    .poster{
+        min-height: 265px;
+        img{
+            width: 170px;
+            height: 255px;
+            border: 5px solid #fff;
+            -webkit-border-radius: 4px;
+            cursor: pointer;
+            &:hover{
+                border: 5px solid #3768b7;
+            }
+            
+        }
+    }
+    
+    .nome{
+        font-weight: 700;
+        display: block;
+        transition: color .15s ease-in-out;
+        -moz-transition: color .15s ease-in-out;
+        -webkit-transition: color .15s ease-in-out;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 5px 0 0;
+        text-decoration: none !important;
+        color: #fff !important;
+    }
+    .data{
+        font-weight: 200;
+        color: #919191;
+        font-size: .85em;
+    }
+    .genero{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 0;
+        height: 28px;
+        .genero-do-filme{
+            padding: 3px 5px;
+            border-radius: 5px;
+            margin-right: 5px;
+            border: 1px solid #919191;
+            font-size: .85em;
+            text-overflow: ellipsis;
+            display: inline-block;
+        }
+    }
+}
