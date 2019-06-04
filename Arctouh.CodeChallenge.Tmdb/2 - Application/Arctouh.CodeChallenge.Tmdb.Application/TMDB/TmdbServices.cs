@@ -33,7 +33,7 @@ namespace Arctouh.CodeChallenge.Tmdb.Application.TMDB
             if (pagina <= 0) pagina = 1;
             var result = await _tmdbHttpClientServices.Get($"{_upcomingMoviesUrl}?page={pagina}");
             var movies = await _jsonServices.DeserializarRetorno<MoviesResult>(result);
-            UpdateGenres(movies);
+            await UpdateGenres(movies);
             return movies;
         }
 
@@ -42,7 +42,7 @@ namespace Arctouh.CodeChallenge.Tmdb.Application.TMDB
             if (pagina <= 0) pagina = 1;
             var result = await _tmdbHttpClientServices.Get($"{_searchMoviesUrl}?query={query}&page={pagina}");
             var movies = await _jsonServices.DeserializarRetorno<MoviesResult>(result);
-            UpdateGenres(movies);
+            await UpdateGenres(movies);
             return movies;
         }
 
@@ -52,15 +52,16 @@ namespace Arctouh.CodeChallenge.Tmdb.Application.TMDB
             return await _jsonServices.DeserializarRetorno<GeneroResultDto>(result);
         }
 
-        private async void UpdateGenres(MoviesResult movies)
+        private async Task<bool> UpdateGenres(MoviesResult movies)
         {
-            if (movies == null || !movies.Results.Any()) return;
+            if (movies == null || !movies.Results.Any()) return await Task.FromResult(false);
             var genres = await GetGenres();
             foreach (var movie in movies.Results)
             {
                 movie.Generos = new List<GeneroDto>();
                 movie.Generos.AddRange(movie.IdsDosGeneros.Select(x => new GeneroDto { Id = x, Nome = genres.Generos.FirstOrDefault(g => g.Id == x)?.Nome }).ToList());
             }
+            return await Task.FromResult(true);
         }
     }
 }
