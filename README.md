@@ -9,6 +9,8 @@ Front-end em Single Page Application, hospedado em AWS S3 e distribuído via AWS
 - Front montado com Vue.js, utilizando Vue-router para carregar dinâmicamente os componentes 
 de acordo com a rota
 - Utilizei Less para estilizar a aplicação
+- Utilixei Webpack como bundler
+- Criei componentes em vue e reaproveitei eles, para manter a aplicação o menor possível 
 
 ``` bash
 #Configurações do Vue.js: 
