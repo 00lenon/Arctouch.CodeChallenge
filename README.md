@@ -2,7 +2,7 @@
 
 ## Detalhamento técnico
 - Aplicação totalmente Serverless, hospedada na Amazon Web Services, utilizando CloudFront, API Gateway e AWS Lambda
-- Backend em .Net Core 2.1, utilizando AWS Lambda
+- Backend em .Net Core 2.1
 
 ## Front-end
 Front-end em Single Page Application, hospedado em AWS S3 e distribuído via AWS CloudFront (CDN)
